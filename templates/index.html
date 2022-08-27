@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Traffic Signs Recognition</title>
+    <style>
+        .card{
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Traffic Signs Recognition</a>
+        </div>
+    </nav>
+    <div class="card mx-auto mt-10" style="height: 10rem; width: 50rem;">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="file" name = "file" class="form-control" id="image" required>
+            </div>
+            <button class = "btn btn-primary position-absolute bottom-0 start-50 translate-middle-x" type="submit">Predict</button>
+        </form>
+    </div>
+    <footer class="footer bg-dark py-3 w-100 position-absolute bottom-0">
+        <div class="container">
+            <span class="text-white">&copy; Traffic-Sign-Recognition 2022</span>
+        </div>
+    </footer>
+</body>
+</html>
